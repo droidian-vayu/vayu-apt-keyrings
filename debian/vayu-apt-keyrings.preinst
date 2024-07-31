@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -e
+
+fn_clean_previous_files() {
+    ## Clean previous config files if found
+    arr_dirs_to_check=( \
+        /etc/apt/trusted.gpg.d \
+        /usr/share/vayu-apt-config/trusted.gpg.d \
+        /usr/lib/adaptation-droidian-vayu/trusted.gpg.d \
+        /usr/share/keyrings \
+        )
+
+    arr_patterns=( "*vayu*gpg" "*vayu*asc" )
+
+    for dir in ${arr_dirs_to_check[@]}; do
+        if [ -d "${dir}" ]; then
+	    for patt in ${arr_patterns[@]}; do
+	        for file in $(find ${dir} -name "${patt}"); do
+		    rm -v ${file}
+	        done
+	    done
+        fi
+    done
+}
+
+case "$1" in
+    install)
+        fn_clean_previous_files
+        ;;
+    upgrade)
+        fn_clean_previous_files
+        ;;
+esac
+
+exit 0

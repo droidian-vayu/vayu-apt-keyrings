@@ -1,0 +1,14 @@
+Source: vayu-apt-keyrings
+Maintainer: droidian-vayu Github Org
+Section: misc
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               debhelper-compat (= 13),
+Standards-Version: 4.5.0.3
+
+Package: vayu-apt-keyrings
+Architecture: all
+Pre-Depends: apt,
+Depends: ${misc:Depends},
+         ca-certificates,
+Description: APT keyrings for droidian-vayu Github apt repo
