@@ -1,0 +1,7 @@
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/vayu-apt-keyrings.substvars
+debian/vayu-apt-keyrings/
+out-vayu-apt-keyrings/
+
