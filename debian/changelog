@@ -1,9 +1,7 @@
-vayu-apt-keyrings (2+git20240731225409.75be64d.trixie) trixie; urgency=medium
+vayu-apt-keyrings (3+git20241127121905.bde6b96.trixie) trixie; urgency=medium
 
   [berbascum]
-  * (75be64d) Update keyring 
-  * (9430659) Build release: pre-configs before building new version 1-trixie 
-  * (634a617) Add debian packaging 
-  * (d05526b) Add the pkg_rootfs dir with the package files 
+  * (bde6b96) (gpg) pubkey: update the gpg public key 
+  * (9cb6e72) Build release: pre-configs before building new version 2-trixie 
 
- -- berbascum <berbascum@ticv.cat>  Wed, 31 Jul 2024 22:54:09 +0200
+ -- berbascum <berbascum@ticv.cat>  Wed, 27 Nov 2024 12:19:05 +0100
